@@ -13,4 +13,4 @@ Bước 2: Cài đặt hệ điều hành Ubuntu (WSL2)
  Thực hiện: Vào Microsoft Store, tìm bản Ubuntu (bản chính chủ logo cam) và nhấn Get/Install.
  Khởi tạo: Mở Ubuntu lên, đặt Username (ví dụ: manhhung) và Password.
  Lưu ý: Khi gõ mật khẩu trong Linux, màn hình sẽ không hiện ký tự, cứ gõ xong rồi Enter.
-![Mô tả ảnh](image/Ubuntu_install.png)
+![Mô tả ảnh](https://github.com/manhhung19960204-ui/LINUX-_LicheePi_Nano/blob/main/image/Ubuntu_install.png)
