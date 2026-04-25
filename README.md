@@ -14,3 +14,14 @@ Bước 2: Cài đặt hệ điều hành Ubuntu (WSL2)
  Khởi tạo: Mở Ubuntu lên, đặt Username (ví dụ: manhhung) và Password.
  Lưu ý: Khi gõ mật khẩu trong Linux, màn hình sẽ không hiện ký tự, cứ gõ xong rồi Enter.
 ![Mô tả ảnh](image/UbuntuInstall.png)
+_ Cập nhật hệ thống để giúp Ubuntu luôn ở trạng thái mới nhât : sudo apt update && sudo apt upgrade -y
+_ Cài đặt Dependencies cho hệ thống : sudo apt install -y build-essential libncurses5-dev libssl-dev bison flex \ git bc u-boot-tools device-tree-compiler gcc-arm-linux-gnueabi \ python3 python3-dev python3-setuptools swig libelf-dev wget
+
+Bước 3 : tải mã nguồn buildroot và tạo thư mục 
+ _ tạo thư mục : mkdir ~/licheepi_nano
+ _ Tải build root : git clone https://github.com/buildroot/buildroot.git --depth=1
+cd buildroot
+ _ chạy thử : make menuconfig
+ ![Mô tả ảnh](image/RunBuildRoot.png)
+
+ 
