@@ -23,5 +23,11 @@ Bước 3 : tải mã nguồn buildroot và tạo thư mục
 cd buildroot
  _ chạy thử : make menuconfig
  ![Mô tả ảnh](image/RunBuildRoot.png)
+ _ Buildroot thành công 
+ ![Mô tả ảnh](image/BuildRootComplete.png)
+ _ Build U-Boot Lichee Pi Nano thành công
+  ![Mô tả ảnh](image/BuildUBoot.png)
+
+
 
  
