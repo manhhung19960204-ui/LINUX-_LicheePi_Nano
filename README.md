@@ -1,21 +1,23 @@
 EMBEDDED LINUX - LICHEEPI NANO
 
+Sản phẩm cuối cùng : Download u-boot-sunxi-with-spl.bin  https://drive.google.com/drive/u/1/folders/1Q5pth0KcZJTVVK6plZnPpDrBxEI-p6PS
+
+Mô tả: File đã được build thành công cho kiến trúc ARM (Lichee Pi Nano), bao gồm cả SPL và U-Boot.
+
+Bộ mã nguồn đầy đủ (SDK): Download licheepi_nano_sdk.tar.gz https://drive.google.com/drive/u/1/folders/1Q5pth0KcZJTVVK6plZnPpDrBxEI-p6PS
+
 Bước 1: Kích hoạt nền tảng ảo hóa trên Windows
- Trước khi cài được Linux, bạn phải cho phép Windows chạy chế độ máy ảo.
+ Trước khi cài được Linux, phải cho phép Windows chạy chế độ máy ảo.
 
- Thực hiện: Mở Command Prompt (Admin), chạy lệnh wsl --install.
+ Thực hiện: Mở Command Prompt , chạy lệnh wsl --install.
  Kết quả: Hệ thống đã bật Virtual Machine Platform và Windows Subsystem for Linux.
- Lưu ý: Bạn đã hoàn thành bước này và cần khởi động lại máy (Restart) để có hiệu lực.
-
- Bước 2: Hướng dẫn mở docker
- _
-
+ 
 
 Bước 2: Cài đặt hệ điều hành Ubuntu (WSL2)
- Thay vì dùng máy ảo VMware nặng nề, bạn chọn dùng WSL2 để nhẹ máy và build code nhanh hơn.
+ Sử dụng Docker để thiết lập môi trường Build
 
- Thực hiện: Vào Microsoft Store, tìm bản Ubuntu (bản chính chủ logo cam) và nhấn Get/Install.
- Khởi tạo: Mở Ubuntu lên, đặt Username (ví dụ: manhhung) và Password.
+ *Tại sao dùng Docker? Thay vì cài đặt trực tiếp các công cụ build lên Ubuntu có thể gây lỗi xung đột thư viện, em sử dụng Docker để đảm bảo môi trường build  ổn định, sạch sẽ 
+ 
  Lưu ý: Khi gõ mật khẩu trong Linux, màn hình sẽ không hiện ký tự, cứ gõ xong rồi Enter.
 ![Mô tả ảnh](image/UbuntuInstall.png)
 _ Cập nhật hệ thống để giúp Ubuntu luôn ở trạng thái mới nhât : sudo apt update && sudo apt upgrade -y
@@ -30,9 +32,13 @@ cd buildroot
  _ Buildroot thành công 
  ![Mô tả ảnh](image/BuildRootComplete.png)
  _ Build U-Boot Lichee Pi Nano thành công
+  Lệnh cấu hình: make ARCH=arm licheepi_nano_defconfig
+  Lệnh build: make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- -j$(nproc)
   ![Mô tả ảnh](image/BuildUBoot.png)
 _ Hoàn thành RootFS
   ![Mô tả ảnh](image/CompleteRootfs.png)
+
+
 
 
 
