@@ -24,7 +24,7 @@ _ Kernel & RootFS: Nhân Linux chạy và gắn kết phân vùng chứa hệ đ
  Kết quả: Hệ thống đã bật Virtual Machine Platform và Windows Subsystem for Linux.
  
 
-Bước 2: Cài đặt hệ điều hành Ubuntu (WSL2)
+### Bước 2: Cài đặt hệ điều hành Ubuntu (WSL2)
  Sử dụng Docker để thiết lập môi trường Build
 
  *Tại sao dùng Docker? Thay vì cài đặt trực tiếp các công cụ build lên Ubuntu có thể gây lỗi xung đột thư viện, em sử dụng Docker để đảm bảo môi trường build  ổn định, sạch sẽ 
